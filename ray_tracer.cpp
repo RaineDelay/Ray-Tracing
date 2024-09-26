@@ -10,6 +10,7 @@ int main(){
     fstream image ("image.ppm");
     if(image.is_open()){
         image << "P3\n" << img_width << " " << img_height << "\n255\n";
+        // Main render loop
         for(int j = 0; j < img_height; j++){
             for(int i = 0; i < img_width; i++){
                 auto r = double(i) / (img_width - 1);
